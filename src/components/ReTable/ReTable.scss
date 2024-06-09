@@ -1,0 +1,273 @@
+@import "../../App.scss";
+
+.ReTableWrapper {
+  margin: unset;
+  margin-top: 12px;
+  width: 100%;
+
+  .TableWrapper {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    width: inherit;
+    //padding-bottom: 4px;
+    /* margin: 10px 0; */
+
+    .tableWrapper {
+      font-weight: 600;
+      border-collapse: collapse;
+      overflow-y: auto;
+      border-radius: 8px;
+      width: inherit;
+
+      .table {
+        width: 100%;
+        color: #000;
+        margin: 0;
+        //margin-bottom: 10px;
+        font-size: 0.7rem;
+
+        .thead {
+          // background-color: rgb(220, 219, 219);
+         
+          tr {
+            height: 50px;
+            vertical-align: middle;
+          }
+
+          th,
+          td {
+            vertical-align: center;
+            padding: 0.8rem 0.5rem;
+            width: 90px;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.5rem;
+            font-weight: 200;
+            text-wrap: wrap;
+            border-bottom: 1px solid rgb(220, 219, 219);
+          }
+        }
+
+        .tbody {
+          border-top: unset;
+
+          .fallback-elements .spin {
+            margin: 25px;
+          }
+
+          tr {
+            // border-bottom: 1.5px solid rgb(189, 188, 188);
+            height: 50px;
+            vertical-align: middle;
+
+            td {
+              border-bottom: unset;
+              vertical-align: center;
+              white-space: normal;
+              padding: 8px;
+              max-width: 200px;
+              text-wrap: wrap;
+              border-bottom: 1px solid rgb(220, 219, 219);
+              border-right: 1px solid rgb(220, 219, 219);
+              .emoji {
+                position: relative;
+                display: inline-block;
+              }
+              
+              .emoji:hover::after {
+                content: attr(title);
+                position: absolute;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                padding: 4px;
+                border-radius: 4px;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+              }
+
+              div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+              }
+              .popup {
+
+                tr {
+                  border-bottom: none;
+                  height: 32px;
+
+                  td {
+                    padding: 4px;
+                  }
+                }
+              }
+
+              span {
+                img {
+                  width: 20px;
+                }
+
+                svg {
+                  margin-right: 8px;
+                }
+              }
+
+              // overflow: hidden;
+
+              &:last-child {
+                overflow: visible;
+              }
+            }
+
+            &:last-child {
+              border: 0px;
+            }
+
+            &:hover {
+              background-color: rgb(240, 240, 240);
+              cursor: pointer;
+            }
+          }
+
+          .order {
+            color: #c4c3c3;
+          }
+
+          .mid {
+            color: #1a2fce;
+          }
+
+          .transactionDate {
+            /* display: flex;
+            flex-direction: column; */
+
+            /*           align-items: center;
+   */
+            .date {
+              display: flex;
+              align-items: center;
+
+              span {
+                margin-right: 4px;
+              }
+            }
+
+            .time {
+              color: rgb(202, 205, 202);
+            }
+          }
+
+          .customer {
+            img {
+              margin-right: 12px;
+            }
+          }
+
+          .card-method {
+            img {
+              max-height: 12px;
+              max-width: 24px;
+              margin-right: 4px;
+            }
+
+            svg {
+              width: 28px;
+              height: 18px;
+            }
+          }
+
+          .status {
+            display: flex;
+            align-items: center;
+
+            /*           justify-content: center;
+   */
+            div {
+              border-radius: 50%;
+              width: 8px;
+              height: 8px;
+              margin-right: 4px;
+            }
+          }
+
+
+    
+
+          .actions {
+            display: flex;
+            align-items: center;
+
+            .action-icon {
+              margin: 0px 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tableDetailRow {
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: grey;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      padding: 4px;
+      border-radius: 8px;
+    }
+
+  }
+
+  .dateWlogo {
+    display: flex;
+    align-items: center;
+
+    // flex-wrap: wrap;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .date {
+      min-width: 60px;
+      max-width: 80px;
+      text-wrap: wrap;
+    }
+  }
+
+  .logoName {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+
+    .circle {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin: 0px 4px;
+      
+    }
+
+    .m-name {
+      white-space: nowrap;
+      width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0px 8px;
+      // flex-wrap: wrap;
+    }
+  }
+
+
+}
