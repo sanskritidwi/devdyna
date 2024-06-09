@@ -115,7 +115,7 @@ function Dashboard() {
       setFilteredRows(data?.rows || []);
       setFilteredDates(sortedDates);
     }
-  }, [selectedWeek, data, sortedDates]);
+  }, [selectedWeek, data]);
 
   const getTotalActivity = (
     data: Row[]
