@@ -371,7 +371,7 @@ function Dashboard() {
               chartDataSetProps={[
                 {
                   trxSum: 300,
-                  label: ["Trx Count"],
+                  label: ["Percentage"],
                   labels: ["Burnout %", "Not BurntOut%"],
                   data: [25, 75],
                   backgroundColor: [`#FAC76E`, `#0396A6`, `red`],
